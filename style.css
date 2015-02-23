@@ -1,0 +1,352 @@
+html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre, 
+ a, abbr, acronym, address, big, cite, code, 
+ del, dfn, em, font, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var, b, u, i, 
+ center, dl, dt, dd, ol, ul, li, fieldset, form, label,
+ legend, table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+}
+
+body {
+background:#f5f5f5;
+font-family:Tahoma;
+}
+
+#Field {
+ width:1000px;
+ height:600px;
+ border:3px solid #fff;
+ margin:20px auto;
+ padding:0px 20px;
+ background:#228B22;
+ border-radius:15px;
+ box-shadow:3px 3px 10px #000;
+}
+
+header {
+padding:5px 0px;
+height:60px;
+border-bottom:3px solid #fff;
+}
+
+@font-face {
+font-family:Cinzel Decorative-Regular;
+src: url("CinzelDecorative-Regular.ttf");
+font-family:Cinzel Decorative-Bold;
+src: url("CinzelDecorative-Bold.ttf");
+}
+
+h1 {
+float:left;
+margin-left:355px;
+font-size:3em;
+color:#fff;
+text-shadow:2px 2px 5px rgba(26,34,33, 0.7);
+display:inline-block;
+font-family:Cinzel Decorative-Bold;
+}
+
+#playNow {
+float:right;
+width:130px;
+height:50px;
+background:-webkit-linear-gradient(top, #FF7F50, #FF0000);
+border-radius:10px;
+cursor:pointer;
+display:inline-block;
+margin-top:4px;
+box-shadow:2px 2px 5px #2d682d;
+}
+
+#playNow:hover {
+background:-webkit-linear-gradient(top, #FF0000, #FF7F50);
+}
+
+#playNow div {
+margin:15px 0px 0px 25px;
+color:#e1e1e1;
+font-weight:bold;
+-webkit-transition:all 0.5s ease;
+transition:all 0.5s ease;
+}
+
+#playNow div:hover {
+color:#fff;
+}
+
+#playZone {
+padding:10px 5px;
+}
+
+.players{
+font-size:1.2em;
+color:#fff;
+text-align:center;
+}
+
+.hand {
+height:225px;
+border-top:1px solid #fff;
+border-bottom:1px solid #fff;
+}
+
+#dealerHand {
+margin-bottom:5px;
+}
+
+.score {
+margin:5px 0 0 0px;
+color:#823838;
+font-weight:bold;
+float:left;
+}
+
+#balanceName {
+float:right;
+color:#823838;
+font-weight:bold;
+margin:5px 5px 0 0px;
+}
+
+#balanceValue {
+float:right;
+margin:5px 0 0 0;
+color:#fff;
+width:40px;
+text-align:right;
+}
+
+#myScore, #dealerScore {
+margin:5px 0 0 5px;
+float:left;
+}
+
+#stakeZone {
+float:right;
+margin:40px -118px 0 0px;
+width:90px;
+}
+
+#stakeZone h4 {
+color:#823838;
+margin:0 0px 3px 0;
+position:relative;
+left:-5px;
+display:inline-block;
+}
+
+#stakeValue {
+display:inline-block;
+color:#fff;
+}
+
+#result {
+width:350px;
+height:200px;
+position:relative;
+top:-400px;
+left:325px;
+border:2px solid #fff;
+background:rgba(221,221,221,0.75); 
+border-radius:30px;
+display:none;
+}
+
+#resLabel{
+text-align:center;
+padding-top:75px;
+font-family:Verdana;
+font-size:2em;
+color:#696969;
+}
+
+#oneMoreCard {
+text-align:center;
+color:#ff6347;
+margin-top:30px;
+}
+
+#oneMoreCard div {
+font-weight:bold;
+}
+
+#yes, #no {
+color:#696969;
+font-size:0.9em;
+cursor:pointer;
+}
+
+#yes {
+border-right: 1px solid #ddd;
+padding-right:5px;
+}
+
+#yes:hover, #no:hover {
+text-decoration:underline;
+}
+
+.Cards {
+width:264px;
+height:189px;
+margin:20px auto;
+}
+
+.firstCard {
+width:122px;
+height:189px;
+float:left;
+}
+
+.secondCard {
+width:122px;
+height:189px;
+float:right;
+}
+
+#myFirstCard, #mySecondCard, #dealerFirstCard, #dealerSecondCard {
+display:inline-block; 
+/*border:1px solid #000;*/
+}
+
+#myFirstCard {
+/*background:url(img/sprite.gif) no-repeat 91.7% 75%;*/
+}
+
+#mySecondCard {
+/*background:url(img/sprite.gif) no-repeat 0% 25%;*/
+}
+
+#dealerFirstCard {
+/*background:url(img/sprite.gif) no-repeat 8.3% 0%;*/
+}
+
+#dealerSecondCard {
+/*background:url(img/sprite.gif) no-repeat 16.6% 100%;*/
+}
+
+#thirdCard, #firstAddCard, #secondAddCard, #thirdAddCard, #fourthAddCard, #fifthAddCard {
+width:122px;
+height:189px;
+display:inline-block;
+float:right;
+}
+
+#thirdCard {
+margin:-210px 200px 0 0;
+}
+
+#firstAddCard {
+margin:-210px 200px 0 0;
+z-index:1;
+}
+
+#secondAddCard  {
+margin:-210px 150px 0 0;
+z-index:2;
+}
+
+#thirdAddCard {
+margin:-210px 100px 0 0;
+z-index:3;
+}
+
+#fourthAddCard {
+margin:-210px 50px 0 0;
+z-index:4;
+}
+
+#fifthAddCard {
+margin:-210px 0 0 0;
+z-index:5;
+}
+
+select {
+float:right;
+padding:2px;
+margin:0 0 0 15px;
+border-radius:3px;
+box-shadow:2px 2px 2px #2d682d;
+border:1px solid #823838;
+}
+
+.add {
+margin:15px 0 0 52px;
+padding:5px 10px;
+border-radius:5px;
+background:-webkit-linear-gradient(top, #ddd, #fff);
+font-family:Trebouchet MS;
+font-size:1.1em;
+color:#777;
+}
+
+#rules {
+margin:20px 0 0 52px;
+}
+
+#cont{
+margin-left:20px;
+}
+
+#list {
+width:700px;
+height:460px;
+background:rgba(0,0,0,0.5);
+position:absolute;
+top:150px;
+left:30px;
+border-radius:10px;
+display:none;
+padding:10px 15px;
+}
+
+#list p {
+color:#fff;
+font-family:Tahoma;
+font-size:0.9em;
+text-indent:20px;
+}
+
+#close {
+width:40px;
+height:40px;
+background:#fff;
+color:000;
+border-radius:100%;
+opacity:1;
+font-weight:bold;
+font-size:1.5em;
+position:relative;
+top:5px;
+left:640px;
+display:none;
+}
+
+address {
+float:right;
+margin:20px 30px 0 0;
+display:none;
+}
+
+#fb, #vk {
+display:inline-block;
+height:30px;
+position:relative;
+top:5px;
+}
+
+#fb {
+width:300px;
+margin:20px 30px 0 40px;
+}
+
+#vk {
+width:200px;
+margin:20px 0 0 0;
+}
