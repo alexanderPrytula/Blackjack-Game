@@ -1,0 +1,180 @@
+<!doctype html>
+ <html lang="en">
+  <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+   <meta charset="utf-8">
+   <title>BlackJack</title>
+   <link rel="shortcut icon" href="oza.jpg">
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <script type="text/javascript" src="//vk.com/js/api/openapi.js?97"></script>
+   <script src="jQuery 1.10.2.js"></script>
+   <script src="script.js"></script>
+  </head>
+  <body>
+
+  <script type="text/javascript">
+  VK.init({
+    apiId: 3939233,
+    onlyWidgets: true
+  });
+</script>
+
+
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  
+  <section id="Field">
+   <header>
+    <h1>BlackJack</h1>
+  
+    <div id="playNow">
+     <div>Play Now!</div>
+    </div>
+	
+	<div style="clear:both"></div>
+   </header>
+   
+   <section id="playZone">
+    <h3 class="players">Dealer</h3>
+    <div class="hand" id="dealerHand">
+     <p class="score">Score:</p>
+	 <p id="dealerScore"></p>
+	 
+	 <section class="Cards">
+	  <div class="firstCard" id="dealerFirstCard"></div>
+	  <div class="secondCard" id="dealerSecondCard"></div>
+	 </section>
+	 
+	 <div id="firstAddCard"></div>
+	 <div id="secondAddCard"></div>
+	 <div id="thirdAddCard"></div>
+	 <div id="fourthAddCard"></div>
+	 <div id="fifthAddCard"></div>
+	 
+	 <div style="clear:both"></div>
+    </div>
+   
+    <div class="hand" id="myHand">
+     <p class="score">Score:</p>
+	 <p id="myScore"></p>
+	 <p id="balanceValue">100$</p>
+	 <p id="balanceName">Balance:</p>
+	 
+	 
+	 <section id="stakeZone">
+	  <select>
+	   <option>0</option>
+	   <option>10$</option>
+	   <option>20$</option>
+	   <option>30$</option>
+	  </select>
+	 </section> 
+	
+	 
+	 <section class="Cards">
+	  <div class="firstCard" id="myFirstCard"></div>
+	  <div class="secondCard" id="mySecondCard"></div>
+	 </section>
+	 
+	 <div id="thirdCard"></div>
+	 
+	 <div style="clear:both"></div>
+    </div>
+    <h3 class="players">Player</h3>
+   </section> 
+   
+   
+   <section id="result">
+    
+	<p id="resLabel"></p>
+	
+	<div id="oneMoreCard">
+	 <!-- <div>One more card?</div> -->
+	 <span id="yes">Yes</span>
+	 <span id="no">No</span>
+    </div>
+	
+   </section>
+   
+  </section>
+
+
+  <div id="list">
+   <p>- Ошибочно считается, что цель заключается в том, чтобы набрать как можно больше очков, но не более 21.
+    На самом деле — обыграть дилера. 
+   </p>
+   <p>- Значения очков каждой карты: от двойки до десятки — соответственно от 2 до 10,
+   у туза — 1 или 11 (11 пока общая сумма не больше 21, далее 1), у т. н. картинок (король, дама, валет) — 10.
+   </p>
+   <p>
+   - Если у игрока и дилера число очков на руках равное, то такая ситуация называется «Ровно»,
+   часто в казино это называют «Стей» — от англ. stay, в английском языке это звучит как Push (Пуш).
+   </p>
+   <p>
+   - Дилер раздаёт карты :
+   по две карты каждому игроку, себе раздаёт одну карту (в США принято раздавать дилеру две карты, одна из
+   которых открыта, а другая — закрыта,
+   то есть находится на столе рубашкой вверх). Все карты открываются сразу (видны и дилеру, и игроку).
+   </p>
+   <p>
+   - Если у игрока сразу после раздачи набралось 21 очко (то есть у игрока туз и 10 или туз и картинка),
+   то такая ситуация и называется блек-джек.
+   В таком случае игроку сразу выплачивается выигрыш 3 к 2 (то есть в 1,5 раза превышающий его ставку).
+   </p>
+   <p>
+   - Далее игрокам, у которых не блек-джек, предлагается на выбор либо взять ещё карту 
+   (в таком случае игрок должен сказать дилеру «карту» или «ещё», англ. «hit me»), либо остаться
+   при тех картах (и той сумме очков),
+   которые у него на руке (в этом случае игрок должен сказать дилеру «достаточно» или «хватит»).
+   </p>
+   <p>
+   - Если у игрока после взятия новой карты сумма очков превысит 21,
+   то такая ситуация называется «перебор». Дилер произносит «много» и снимает ставку игрока в пользу казино.
+   </p>
+   <p>
+   - Если у дилера в первых двух картах набирается 21 очко (блек-джек), то все игроки (кроме тех, у кого тоже блек-джек),
+   проигрывают. Те, у которых блек-джек, остаются при своих ставках.
+   </p>
+   <p>
+   - После того, как все игроки завершили брать карты, дилер говорит «себе» и раздаёт карты себе. 
+   Общее правило блек-джека состоит в том, что дилер обязан остановиться, как только наберёт 
+   17 очков или выше, и обязан брать, пока не достигнет (даже если у всех не перебравших меньше очков).
+   </p>
+   <hr>
+   <button id="close">X</button>
+  </div>
+  
+  <button id="rules" class="add">Rules</button>
+
+  <div id="fb">
+   <div class="fb-like" data-href="http://blackjack.cc.ua/" data-width="300"    data-height="30" data-colorscheme="light" data-layout="standard" data-  action="like" data-show-faces="false" data-send="false"></div>
+  </div>
+
+  <div id="vk">
+   <div id="vk_like"></div>
+<script type="text/javascript">
+window.onload = function () {
+ VK.init({apiId: 3939233, onlyWidgets: true});
+ VK.Widgets.Like('vk_like', {width: 200, height: 30}, 1);
+}
+</script>
+  </div>
+  
+  <button id="cont" class="add">Contacts</button>
+  
+  <address>
+   <p><b><span style="font-style:normal;">Alexander Prytula</span></b></p>
+   <p><span style="font-style:normal;">Email:</span> isitinme88@gmail.com</p>
+  <address>
+  
+
+
+  </body>
+ </html>
